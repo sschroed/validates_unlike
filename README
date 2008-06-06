@@ -1,0 +1,16 @@
+Validates Unlike Plugin (v 0.1)
+========================
+
+Validates Unlike plugin validates that the value of the specified attribute doesn't match against the regular 
+expression provided
+
+Class Contact < ActiveRecord::Base
+  validates_unlike :comment, :with =>/html|http|onclick|onmouseover/, 
+                   :message => "comment can't include: href,http,onclick,onmouseover."
+end
+
+
+========================
+
+Bug reports and feedback are always welcome. Please send them to edgargonzalez@gmail.com 
+You can also visit http://www.lacaraoscura.com/2006/07/11/validates-unlike-plugin/ and post a comment.
